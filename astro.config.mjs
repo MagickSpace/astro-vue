@@ -14,7 +14,13 @@ export default defineConfig({
     plugins: [Inspect(), tailwindcss()]
   },
   site: 'https://example.com',
-  integrations: [mdx(), sitemap(), AutoImport({
+  integrations: [ mdx({
+    syntaxHighlight: "shiki",
+    shikiConfig: {
+      theme: "github-dark-dimmed",
+    },
+    gfm: true,
+  }), sitemap(), AutoImport({
     imports: ['vue', 'vue/macros', '@vueuse/core', 'react'],
     vueTemplate: true,
     dirs: ['src/utils/*.ts'],
