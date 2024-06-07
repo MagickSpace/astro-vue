@@ -1,5 +1,5 @@
 
-export interface Post {
+export interface Blog {
   title: string
   description: string
   metaTitle?: string
