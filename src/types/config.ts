@@ -1,6 +1,6 @@
 import { defineCollection, reference, z } from 'astro:content';
 import { astroZodCollectionsToJsonSchemas } from 'astro-zod-to-json-schema'
-import {POST_METADATA} from "@/types/Tags.ts";
+import {POST_METADATA} from "./Tags.ts";
 
 const blogCollection = defineCollection({
     type: 'content',

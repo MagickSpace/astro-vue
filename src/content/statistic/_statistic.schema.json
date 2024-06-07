@@ -1,0 +1,36 @@
+{
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "dataSource": {
+      "type": "string"
+    },
+    "chartType": {
+      "type": "string"
+    },
+    "timeRange": {
+      "type": "string"
+    },
+    "refreshRate": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "title",
+    "description",
+    "dataSource",
+    "chartType",
+    "timeRange",
+    "refreshRate"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

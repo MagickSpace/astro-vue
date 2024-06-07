@@ -7,9 +7,13 @@ import tailwindcss from '@tailwindcss/vite';
 import { defineConfig } from 'astro/config';
 import AutoImport from 'unplugin-auto-import/astro';
 import Inspect from 'vite-plugin-inspect';
+import { remarkReadingTime } from './src/utils/readingTime.ts';
 
 // https://astro.build/config
 export default defineConfig({
+  markdown: {
+    remarkPlugins: [remarkReadingTime],
+  },
   vite: {
     plugins: [Inspect(), tailwindcss()]
   },

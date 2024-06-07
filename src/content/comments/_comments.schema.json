@@ -1,0 +1,41 @@
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "commentContent": {
+      "type": "string"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "pubDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updatedDate": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "author": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "lang": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "id",
+    "timestamp",
+    "pubDate"
+  ],
+  "additionalProperties": false,
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}
