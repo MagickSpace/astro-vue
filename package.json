@@ -1,0 +1,60 @@
+{
+  "name": "your-project",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bunx --bun astro dev --verbose",
+    "start": "bun astro check --verbose && bunx --bun astro dev --verbose",
+    "build": "bun astro check --verbose && bunx --bun astro build --hot",
+    "preview": "bunx --bun astro preview",
+    "biomes": "bunx @biomejs/biome check --write ./* ",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.7.0",
+    "@astrojs/mdx": "^3.1.0",
+    "@astrojs/node": "^8.2.5",
+    "@astrojs/partytown": "^2.1.0",
+    "@astrojs/react": "^3.5.0",
+    "@astrojs/rss": "^4.0.6",
+    "@astrojs/sitemap": "^3.1.5",
+    "@astrojs/ts-plugin": "^1.8.0",
+    "@astrojs/vue": "^4.4.0",
+    "@react-three/fiber": "^8.16.8",
+    "@tailwindcss/postcss": "^4.0.0-alpha.15",
+    "@tailwindcss/vite": "^4.0.0-alpha.15",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue-macros/volar": "^0.21.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vueuse/core": "^10.10.0",
+    "astro": "^4.10.0",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.2.10",
+    "lodash-es": "^4.17.21",
+    "prettier": "^3.3.1",
+    "prettier-plugin-astro": "^0.14.0",
+    "prettier-plugin-tailwindcss": "^0.6.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss": "^4.0.0-alpha.15",
+    "three": "^0.165.0",
+    "typescript": "^5.4.5",
+    "unplugin-vue-macros": "^2.9.4",
+    "vue": "^3.4.27",
+    "vue-tsc": "^2.0.19"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "1.8.0",
+    "@types/bun": "latest",
+    "@types/node": "^20.14.2",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "unplugin-auto-import": "^0.17.6"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "license": "MIT",
+  "trustedDependencies": ["@biomejs/biome", "esbuild", "sharp", "vue-demi"]
+}
