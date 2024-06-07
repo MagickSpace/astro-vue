@@ -1,38 +1,37 @@
 export type PersonData = {
-	givenName: {
-		[key: string]: string
-	}
-	surName?: {
-		[key: string]: string
-	}
-	publishProfile?: boolean
-	mail?: string
-	mastodon?: string
-	description: {
-		[key: string]: string
-	}
-};
-
+  givenName: {
+    [key: string]: string
+  }
+  surName?: {
+    [key: string]: string
+  }
+  publishProfile?: boolean
+  mail?: string
+  mastodon?: string
+  description: {
+    [key: string]: string
+  }
+}
 
 export const peopleData: PersonData[] = [
   {
     givenName: {
-        en: 'Hrihorii',
-        uk: 'Hrihorii',
-        ru: 'Hrihorii',
-        pl: 'Hrihorii',
-        es: 'Hrihorii',
-        de: 'Hrihorii',
-        fr: 'Hrihorii',
+      en: 'Hrihorii',
+      uk: 'Hrihorii',
+      ru: 'Hrihorii',
+      pl: 'Hrihorii',
+      es: 'Hrihorii',
+      de: 'Hrihorii',
+      fr: 'Hrihorii',
     },
     surName: {
-        en: 'Ilin',
-        uk: 'Ilin',
-        ru: 'Ilin',
-        pl: 'Ilin',
-        es: 'Ilin',
-        de: 'Ilin',
-        fr: 'Ilin',
+      en: 'Ilin',
+      uk: 'Ilin',
+      ru: 'Ilin',
+      pl: 'Ilin',
+      es: 'Ilin',
+      de: 'Ilin',
+      fr: 'Ilin',
     },
     publishProfile: true,
     mail: 'devopsick@pm.me',

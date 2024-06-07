@@ -26,12 +26,7 @@
       "type": "string"
     }
   },
-  "required": [
-    "company",
-    "role",
-    "dateStart",
-    "dateEnd"
-  ],
+  "required": ["company", "role", "dateStart", "dateEnd"],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }

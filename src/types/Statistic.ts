@@ -1,8 +1,8 @@
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content'
 
-const statistic = defineCollection({ 
-    type: 'data',
-    schema: z.object({
+const statistic = defineCollection({
+  type: 'data',
+  schema: z.object({
     title: z.string(),
     description: z.string(),
     dataSource: z.string(),
@@ -11,6 +11,6 @@ const statistic = defineCollection({
     refreshRate: z.string(),
     lang: z.string().optional(),
   }),
-});
+})
 
-export const collections = { statistic };
+export const collections = { statistic }

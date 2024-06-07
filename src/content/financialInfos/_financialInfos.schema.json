@@ -57,22 +57,10 @@
     },
     "language": {
       "type": "string",
-      "enum": [
-        "en",
-        "es",
-        "uk",
-        "ru",
-        "de",
-        "fr",
-        "pl"
-      ]
+      "enum": ["en", "es", "uk", "ru", "de", "fr", "pl"]
     }
   },
-  "required": [
-    "title",
-    "description",
-    "pubDate"
-  ],
+  "required": ["title", "description", "pubDate"],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }
