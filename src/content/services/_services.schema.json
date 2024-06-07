@@ -48,18 +48,44 @@
         },
         "format": {
           "type": "string",
-          "enum": ["png", "jpg", "jpeg", "tiff", "webp", "gif", "svg", "avif"]
+          "enum": [
+            "png",
+            "jpg",
+            "jpeg",
+            "tiff",
+            "webp",
+            "gif",
+            "svg",
+            "avif"
+          ]
         }
       },
-      "required": ["src", "width", "height", "format"],
+      "required": [
+        "src",
+        "width",
+        "height",
+        "format"
+      ],
       "additionalProperties": false
     },
     "language": {
       "type": "string",
-      "enum": ["en", "es", "uk", "ru", "de", "fr", "pl"]
+      "enum": [
+        "en",
+        "es",
+        "uk",
+        "ru",
+        "de",
+        "fr",
+        "pl"
+      ]
     }
   },
-  "required": ["title", "description", "serviceImage"],
+  "required": [
+    "title",
+    "description",
+    "serviceImage"
+  ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }

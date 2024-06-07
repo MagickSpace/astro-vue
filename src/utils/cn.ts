@@ -1,11 +1,21 @@
 import { type ClassValue, clsx } from 'clsx'
+
 import { twMerge } from 'tailwind-merge'
 
-// Function to give more importance to the classes
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
+export function wait(ms: number) {
+  return new Promise((resolve) => setTimeout(resolve, ms))
+}
+
+
+export function extractSegmentURL(path: string) {
+  if (!path) return ''
+  if (path === '/') return null
+  return path.split('/')[1]
+}
 // Function to format the date to spain format
 export function formatDate(date: Date) {
   const year = date.getFullYear()

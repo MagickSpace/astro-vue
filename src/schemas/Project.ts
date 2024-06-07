@@ -33,8 +33,8 @@ const projectsCollection = defineCollection({
         .optional()
         .transform((str) => (str ? new Date(str) : undefined)),
       summary: z.string().optional(),
-      demoUrl: z.string().optional(),
-      repoUrl: z.string().optional(),
+      demoUrl: z.string().url().optional(),
+      repoUrl: z.string().url().optional(),
     }),
 })
 

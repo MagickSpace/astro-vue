@@ -42,10 +42,24 @@
         },
         "format": {
           "type": "string",
-          "enum": ["png", "jpg", "jpeg", "tiff", "webp", "gif", "svg", "avif"]
+          "enum": [
+            "png",
+            "jpg",
+            "jpeg",
+            "tiff",
+            "webp",
+            "gif",
+            "svg",
+            "avif"
+          ]
         }
       },
-      "required": ["src", "width", "height", "format"],
+      "required": [
+        "src",
+        "width",
+        "height",
+        "format"
+      ],
       "additionalProperties": false
     },
     "pubDate": {
@@ -66,13 +80,20 @@
       "type": "string"
     },
     "demoUrl": {
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     },
     "repoUrl": {
-      "type": "string"
+      "type": "string",
+      "format": "uri"
     }
   },
-  "required": ["title", "description", "projectLogo", "pubDate"],
+  "required": [
+    "title",
+    "description",
+    "projectLogo",
+    "pubDate"
+  ],
   "additionalProperties": false,
   "$schema": "http://json-schema.org/draft-07/schema#"
 }

@@ -7,7 +7,7 @@ import tailwindcss from '@tailwindcss/vite'
 import { defineConfig } from 'astro/config'
 import AutoImport from 'unplugin-auto-import/astro'
 import Inspect from 'vite-plugin-inspect'
-import { remarkReadingTime } from './src/utils/readingTime.ts'
+import { remarkReadingTime } from './src/utils/remark-reading-time.mjs'
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,7 +17,20 @@ export default defineConfig({
   vite: {
     plugins: [Inspect(), tailwindcss()],
   },
-  site: 'https://example.com',
+  i18n: {
+    routing: {
+      prefixDefaultLocale: true,
+      strategy: 'pathname',
+    },
+    locales: ['en', 'ru', 'es', 'uk', 'de', 'fr', 'pl'],
+    defaultLocale: 'en',
+  },
+  site: 'https://test.com',
+  output: "server",
+  compressHTML: true,
+  prefetch: {
+    prefetchAll: true
+  },
   integrations: [
     mdx({
       syntaxHighlight: 'shiki',

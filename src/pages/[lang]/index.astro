@@ -1,16 +1,26 @@
 ---
-import BaseHead from '../components/BaseHead.astro'
-import Footer from '../components/Footer.astro'
-import Header from '../components/Header.astro'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../consts'
+import BaseHead from '@/components/BaseHead.astro'
+import Footer from '@/components/Footer.astro'
+import Header from '@/components/Header.astro'
+import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts'
 const title = 'Hello World!'
-import Draggable from '../components/draggable.vue'
-import Food from '../components/food.vue'
-import Navigation from '../components/navigation.vue'
+import Food from '@/components/food.vue'
+import Navigation from '@/components/navigation.vue'
+
+import { getLocaleFromUrl } from '@/locales/get-locale-from-urlurl'
+import { useTranslation } from '@/locales/use-translationion'
+import { locales } from '@/locales'
+const locale = getLocaleFromUrl(Astro.url)
+const t = useTranslation(locale)
+import { getLangFromUrl } from '@/locales/utils'
+const lang = getLangFromUrl(Astro.url)
+export const getStaticPaths = () =>
+  locales.map(({ code }) => ({ params: { lang: code } }))
+  
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>

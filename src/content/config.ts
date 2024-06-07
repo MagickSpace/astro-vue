@@ -1,5 +1,5 @@
 import { defineCollection, reference, z } from 'astro:content'
-import { POST_METADATA } from '@/types/Tags.ts'
+import { POST_METADATA } from '@/schemas/Tags'
 import { astroZodCollectionsToJsonSchemas } from 'astro-zod-to-json-schema'
 
 const blogCollection = defineCollection({
@@ -112,7 +112,7 @@ const promotionsCollection = defineCollection({
         .optional(),
       language: z.enum(['en', 'es', 'uk', 'ru', 'de', 'fr', 'pl']).optional(),
       callToActionText: z.string().optional(),
-      callToActionLink: z.string().optional(),
+      callToActionLink: z.string().url().optional(),
       promotionalText: z.string().optional(),
       bannerImage: image().optional(),
     }),
@@ -220,18 +220,33 @@ const projectsCollection = defineCollection({
         .optional()
         .transform((str) => (str ? new Date(str) : undefined)),
       summary: z.string().optional(),
-      demoUrl: z.string().optional(),
-      repoUrl: z.string().optional(),
+      demoUrl: z.string().url().optional(),
+      repoUrl: z.string().url().optional(),
     }),
 })
 
 const categoryCollection = defineCollection({
   type: 'content',
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       description: z.string(),
+      metaTitle: z
+        .string()
+        .max(
+          60,
+          'For optimized SEO, please provide a title with 60 characters or less',
+        )
+        .optional(),
+      metaDescription: z
+        .string()
+        .max(
+          160,
+          'For optimized SEO, please provide an excerpt/description with 160 characters or less',
+        )
+        .optional(),
       icon: z.string().optional(),
+      categoryImage: image(),
       lang: z.string().optional(),
     }),
 })
