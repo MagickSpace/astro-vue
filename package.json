@@ -75,7 +75,9 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "cypress": "^13.11.0",
-    "unplugin-auto-import": "^0.17.6"
+    "unplugin-auto-import": "^0.17.6",
+    "vue-loader": "^17.4.2",
+    "vue-template-compiler": "^2.7.16"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
