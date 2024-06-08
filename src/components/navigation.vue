@@ -25,6 +25,6 @@ import { ref } from 'vue'
 const isMenuOpen = ref<boolean>(false)
 
 const openMenu = (action: boolean) => {
-  isMenuOpen.value = action
+	isMenuOpen.value = action
 }
 </script>

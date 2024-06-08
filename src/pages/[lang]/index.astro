@@ -2,21 +2,11 @@
 import BaseHead from '@/components/BaseHead.astro'
 import Footer from '@/components/Footer.astro'
 import Header from '@/components/Header.astro'
-import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts'
-const title = 'Hello World!'
-import Food from '@/components/food.vue'
-import Navigation from '@/components/navigation.vue'
-
-import { getLocaleFromUrl } from '@/locales/get-locale-from-urlurl'
-import { useTranslation } from '@/locales/use-translationion'
+import { SITE_DESCRIPTION, SITE_TITLE } from '@/consts'
 import { locales } from '@/locales'
-const locale = getLocaleFromUrl(Astro.url)
-const t = useTranslation(locale)
 import { getLangFromUrl } from '@/locales/utils'
 const lang = getLangFromUrl(Astro.url)
-export const getStaticPaths = () =>
-  locales.map(({ code }) => ({ params: { lang: code } }))
-  
+export const getStaticPaths = () => locales.map(({ code }) => ({ params: { lang: code } }))
 ---
 
 <!doctype html>
@@ -28,9 +18,6 @@ export const getStaticPaths = () =>
 		<Header />
 		<main>
 			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<h1>{title}</h1>
-      		<Food />
-			<Navigation client:load />
 			<p>
 				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
 				template serves as a lightweight, minimally-styled starting point for anyone looking to build

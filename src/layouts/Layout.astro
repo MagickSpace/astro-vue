@@ -1,15 +1,16 @@
 ---
 
 import BaseHead from '@/components/BaseHead.astro'
+import ProviderAnimations from '@/components/ProviderAnimations.astro'
 import TailwindIndicator from '@/components/tailwind-indicator.astro'
 import { cn } from '@/utils/cn'
 
 type Props = {
-  title: string
-  description?: string
-  lang: string
-  mainClass?: string
-  bodyClass?: string
+	title: string
+	description?: string
+	lang: string
+	mainClass?: string
+	bodyClass?: string
 }
 
 import { SITE_TITLE } from '@/consts'
@@ -24,6 +25,7 @@ const { title, description, mainClass, bodyClass } = Astro.props as Props
     <BaseHead title={`${title} | ${SITE_TITLE}`} description={description ?? ''} />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
     <script is:inline src="./assets/vendor/preline/preline.js"></script>
+    <ProviderAnimations />
   </head>
   <body class={cn("flex flex-col min-h-screen", bodyClass)}>
         <main class={cn(mainClass)}>
